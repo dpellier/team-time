@@ -10,7 +10,8 @@
     "lint:scss": "sass-lint -v -q './src/**/*.scss'",
     "snapshot": "jest -u",
     "start": "webpack-serve",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "validate": "npm run lint && npm test"
   },
   "author": "Damien Pellier",
   "repository": {
