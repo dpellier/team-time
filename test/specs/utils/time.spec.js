@@ -10,9 +10,9 @@ describe('Time Utils', () => {
     describe('getTimeAsUser', () => {
         it('should return time hour in the user timezone', () => {
             const time = '12:24:36';
-            const timeUS = moment('12:24:36', TIME_FORMAT.FULL_HOUR).tz(usTimezone);
+            const timeInUS = moment.tz('12:24:36', TIME_FORMAT.FULL_HOUR, euTimezone).tz(usTimezone);
 
-            expect(getTimeAsUser(time, euTimezone, usTimezone)).toBe(timeUS.format(TIME_FORMAT.HOUR_MINUTE));
+            expect(getTimeAsUser(time, euTimezone, usTimezone)).toBe(timeInUS.format(TIME_FORMAT.HOUR_MINUTE));
         });
     });
 
