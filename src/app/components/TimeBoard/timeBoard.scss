@@ -1,0 +1,29 @@
+
+@import '../../style/colors';
+
+$time-board-padding: 25px;
+
+.time-board {
+    position: relative;
+    padding: $time-board-padding 0;
+
+    &__from,
+    &__to {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+
+        &::after {
+            position: absolute;
+            top: $time-board-padding;
+            bottom: 0;
+            left: calc(50% - 1px);
+            border-left: solid 1px $black;
+            content: '';
+        }
+    }
+
+    &__member {
+        transition: transform linear .3s;
+    }
+}

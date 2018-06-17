@@ -1,0 +1,24 @@
+
+@import '../../style/form';
+
+.team-panel {
+    @include form();
+
+    &__title {
+        @include form-title();
+    }
+
+    &__availability,
+    &__name,
+    &__picture,
+    &__timezone {
+        @include form-row();
+    }
+
+    &__submit {
+        @include form-submit();
+
+        display: block;
+        margin: auto;
+    }
+}

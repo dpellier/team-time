@@ -1,0 +1,73 @@
+
+@import './colors';
+@import './text';
+
+@mixin input() {
+    border: 1px solid $mercury;
+    border-radius: 5px;
+    padding: 5px;
+    width: 280px;
+    box-sizing: border-box;
+}
+
+@mixin select() {
+    border: 1px solid $mercury;
+    width: 280px;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+@mixin form() {
+    border: solid $mercury 2px;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+@mixin form-title() {
+    display: block;
+    margin-bottom: 10px;
+    border-bottom: solid 1px $mercury;
+    padding-bottom: 5px;
+    color: $gray;
+    font-weight: bold;
+}
+
+@mixin form-row() {
+    margin-bottom: 10px;
+
+    > label {
+        @extend %ellipsis;
+
+        display: inline-block;
+        width: 90px;
+        vertical-align: middle;
+    }
+
+    input {
+        @include input();
+
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+@mixin form-submit() {
+    transition: background-color ease .3s;
+    border: 0;
+    border-radius: 5px;
+    background-color: $dodger-blue;
+    padding: 10px;
+    color: $white;
+
+    &:disabled {
+        background-color: lighten($dodger-blue, 20);
+    }
+
+    &:enabled {
+        cursor: pointer;
+
+        &:hover {
+            background-color: darken($dodger-blue, 10);
+        }
+    }
+}

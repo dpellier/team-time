@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Error /> is correctly rendered 1`] = `
+<div
+  className="error"
+>
+  <span
+    className="error__label"
+  >
+    Sorry, seems like something went wrong...
+  </span>
+</div>
+`;

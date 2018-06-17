@@ -1,0 +1,15 @@
+
+@import '../../style/form';
+
+.profile-panel {
+    @include form();
+
+    &__title {
+        @include form-title();
+    }
+
+    &__availability,
+    &__timezone {
+        @include form-row();
+    }
+}

@@ -1,0 +1,30 @@
+
+@import '../../style/colors';
+
+.time-row {
+    position: relative;
+    border-bottom: solid 1px $mercury;
+    height: 80px;
+    box-sizing: border-box;
+
+    &__available {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(to right, rgba($feijoa, 0) 0%, rgba($feijoa, .7) 19%, rgba($feijoa, 1) 49%, rgba($feijoa, .7) 79%, rgba($feijoa, 0) 100%);
+
+        &--left {
+            background: linear-gradient(to right, rgba($feijoa, 0) 0%, rgba($feijoa, .7) 19%, rgba($feijoa, 1) 100%);
+        }
+
+        &--right {
+            background: linear-gradient(to right, rgba($feijoa, 1) 0%, rgba($feijoa, .7) 79%, rgba($feijoa, 0) 100%);
+        }
+    }
+
+    &__member {
+        position: relative;
+        z-index: 1;
+        height: inherit;
+    }
+}

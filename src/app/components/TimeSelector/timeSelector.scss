@@ -1,0 +1,12 @@
+
+@import '../../style/form';
+
+.time-selector {
+    @include select();
+
+    width: 70px;
+
+    & + & {
+        margin-left: 20px;
+    }
+}

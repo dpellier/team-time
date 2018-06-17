@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loading /> is correctly rendered 1`] = `
+<div
+  className="loading"
+>
+  <svg
+    viewBox="0 0 40 40"
+  >
+    <g>
+      <defs>
+        <linearGradient
+          gradientUnits="userSpaceOnUse"
+          id="spinner"
+          x1="34"
+          x2="4"
+          y1="29"
+          y2="29"
+        >
+          <stop
+            offset=".1"
+            stopColor="#35bdfd"
+            stopOpacity="0"
+          />
+          <stop
+            offset="1"
+            stopColor="#35bdfd"
+          />
+        </linearGradient>
+      </defs>
+      <g
+        fill="none"
+        strokeWidth="3"
+      >
+        <path
+          d="M3,20 A17,17 0 0,1 26,4"
+          stroke="#35bdfd"
+        />
+        <path
+          d="M37,20 A1,1 0 0,1 3,20"
+          stroke="url(#spinner)"
+        />
+        <animateTransform
+          attributeName="transform"
+          dur="1s"
+          repeatCount="indefinite"
+          type="rotate"
+          values="0,20,20;360,20,20"
+        />
+      </g>
+    </g>
+  </svg>
+</div>
+`;

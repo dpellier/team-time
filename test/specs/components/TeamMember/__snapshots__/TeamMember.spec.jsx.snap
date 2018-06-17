@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TeamMember /> is correctly rendered 1`] = `
+<div
+  className="team-member"
+>
+  <div
+    className="team-member__profile"
+  >
+    <img
+      className="team-member__profile__picture"
+      onError={[Function]}
+      src="URL"
+    />
+    <div
+      className="team-member__profile__menu"
+    >
+      <span
+        className="team-member__profile__menu__item"
+      />
+      <span
+        className="team-member__profile__menu__item"
+      />
+      <span
+        className="team-member__profile__menu__item"
+      />
+      <span
+        className="team-member__profile__menu__item"
+      />
+    </div>
+  </div>
+  <span
+    className="team-member__name"
+  >
+    Name
+  </span>
+</div>
+`;

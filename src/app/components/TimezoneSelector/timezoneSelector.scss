@@ -1,0 +1,6 @@
+
+@import '../../style/form';
+
+.timezone-selector {
+    @include select();
+}

@@ -1,0 +1,92 @@
+
+@import '../../style/colors';
+
+$team-member-width: 50px;
+$team-member-height: 50px;
+$team-member-menu-border-size: 1px;
+
+.team-member {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+
+    &__profile {
+        position: relative;
+        width: $team-member-width;
+        height: $team-member-height;
+
+        &__picture {
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            z-index: 2;
+            border-radius: 50%;
+            background-color: $white;
+            width: $team-member-width - ($team-member-menu-border-size * 2);
+            height: $team-member-height - ($team-member-menu-border-size * 2);
+            box-sizing: border-box;
+            pointer-events: none;
+        }
+
+        &__menu {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: transform ease .3s;
+            border: solid $team-member-menu-border-size $black;
+            border-radius: 50%;
+            background-color: $white;
+            width: $team-member-width;
+            height: $team-member-height;
+            overflow: hidden;
+            box-sizing: border-box;
+
+            &:hover {
+                transform: scale(1.8);
+            }
+
+            &__item {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                background: $white no-repeat 3px 4px;
+                background-size: 35%;
+                cursor: pointer;
+                width: $team-member-width / 2;
+                height: $team-member-height / 2;
+                clip-path: polygon(0 0, 0 100%, 100% 0);
+
+                &:hover {
+                    background-color: $dodger-blue;
+                }
+
+                &:nth-child(1) {
+                    background-image: url('assets/slack.png');
+                }
+
+                &:nth-child(2) {
+                    transform: rotate(45deg);
+                    background-image: url('assets/go-to-meeting.png');
+                    transform-origin: 0 100%;
+                }
+
+                &:nth-child(3) {
+                    transform: rotate(90deg);
+                    background-image: url('assets/skype.png');
+                    transform-origin: 0 100%;
+                }
+
+                &:nth-child(4) {
+                    transform: rotate(135deg);
+                    background-image: url('assets/github.png');
+                    transform-origin: 0 100%;
+                }
+            }
+        }
+    }
+
+    &__name {
+        font-size: 12px;
+    }
+}
