@@ -2,6 +2,8 @@
 
 > Web interface to check who is probably currently available in your worldwide team.
 
+[![Build Status](https://travis-ci.org/dpellier/team-time.svg?branch=master)](https://travis-ci.org/dpellier/team-time)
+
 ## Project installation
 
 ```
