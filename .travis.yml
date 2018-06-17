@@ -1,0 +1,19 @@
+language: node_js
+
+node_js:
+  - "9"
+
+before_install:
+  - "npm config set spin false"
+
+script: "npm run validate"
+
+sudo: false
+
+cache:
+  directories:
+    - node_modules
+
+branches:
+  only:
+    - master
